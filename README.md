@@ -24,16 +24,13 @@ Buscar el comentario `LOGO ZONE` en `index.html` (header, hero y footer). Cuando
 
 ### Opción A — Con GitHub (despliegue continuo)
 
-1. Crea una cuenta en [github.com](https://github.com/signup) si aún no tienes.
-2. Crea un repositorio nuevo (vacío, sin README) en GitHub, por ejemplo `cronos-solutions-web`.
-3. Desde esta carpeta, conecta y sube el código:
+1. Repositorio ya creado: [github.com/jddlandaluz6-bit/kronsolutions](https://github.com/jddlandaluz6-bit/kronsolutions).
+2. Desde esta carpeta, sube el código (el remoto `origin` ya está configurado):
    ```bash
-   git remote add origin https://github.com/TU_USUARIO/cronos-solutions-web.git
-   git branch -M main
    git push -u origin main
    ```
-4. Entra a [app.netlify.com](https://app.netlify.com) → **Add new site → Import an existing project**.
-5. Conecta tu cuenta de GitHub y selecciona el repositorio `cronos-solutions-web`.
+3. Entra a [app.netlify.com](https://app.netlify.com) → **Add new site → Import an existing project**.
+4. Conecta tu cuenta de GitHub y selecciona el repositorio `kronsolutions`.
 6. Netlify detectará `netlify.toml` automáticamente (publish = `.`, sin build command). Pulsa **Deploy**.
 7. Cada `git push` a `main` volverá a desplegar el sitio automáticamente.
 
