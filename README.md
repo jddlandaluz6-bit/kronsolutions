@@ -1,6 +1,6 @@
-# Cronos Solutions — Web
+# Kron Solutions — Web
 
-Landing page estática (HTML/CSS/JS puro, sin build step) para **Cronos Solutions**, consultoría B2B de gestión operativa, eficiencia financiera y captación de talento técnico.
+Landing page estática (HTML/CSS/JS puro, sin build step) para **Kron Solutions**, consultoría B2B de gestión operativa, eficiencia financiera y captación de talento técnico.
 
 **En producción:** https://stunning-kheer-35ef43.netlify.app (público, desplegado desde `main` en [github.com/jddlandaluz6-bit/kronsolutions](https://github.com/jddlandaluz6-bit/kronsolutions)). Cada `git push` a `main` vuelve a desplegar automáticamente.
 
@@ -18,9 +18,9 @@ netlify.toml         Configuración de despliegue y cabeceras de seguridad/cach�
 
 No requiere `npm install` ni build: son archivos estáticos servidos tal cual.
 
-## Zonas reservadas para el logo
+## Marca
 
-Buscar el comentario `LOGO ZONE` en `index.html` (header, hero y footer). Cuando exista el isotipo definitivo, sustituir el contenido de `.logo-mark` por el logo real (SVG/PNG) conservando la clase para heredar tamaño y animación de entrada.
+Logo e identidad visual (navy oscuro + cian brillante) basados en el isotipo del diamante "KS". El logo vectorizado vive en `assets/img/logo-mark.svg` (y su variante simplificada en `assets/img/favicon.svg`); se usa como `<img>` dentro de `.logo-mark` en el header, el footer y el fondo del hero. Para reemplazarlo por una versión futura, basta con sustituir ese archivo SVG (o apuntar `src` a uno nuevo) — no hace falta tocar el CSS.
 
 ## Desplegar en Netlify — ya configurado
 
@@ -38,10 +38,10 @@ Netlify detecta el push a `main` y vuelve a desplegar automáticamente en 1-2 mi
 
 > **Nota sobre formularios:** en sitios nuevos, la "detección de formularios" de Netlify también viene desactivada por defecto y hay que activarla una vez en **Forms → Enable form detection** (ya está activada en este proyecto) para que el formulario de contacto reciba envíos.
 
-## Conectar el dominio propio (cronossolutions.es)
+## Conectar el dominio propio (kronsolutions.es)
 
 1. En el panel del sitio en Netlify: **Domain settings → Add a domain**.
-2. Introduce `cronossolutions.es`.
+2. Introduce `kronsolutions.es`.
 3. Netlify te dará los registros DNS a configurar (normalmente un registro `A` o `CNAME` hacia Netlify) en el panel de tu proveedor de dominio.
 4. Netlify emite el certificado HTTPS automáticamente una vez verificado el DNS (puede tardar hasta 24h en propagarse).
 
@@ -53,7 +53,6 @@ El formulario ya está conectado a **Netlify Forms** (`data-netlify="true"` en `
 
 ## Pendiente
 
-- [ ] Sustituir el logo placeholder por el isotipo/monograma definitivo.
-- [ ] Registrar el dominio `cronossolutions.es` y conectarlo en Netlify (ver sección de dominio arriba).
+- [ ] Registrar el dominio `kronsolutions.es` y conectarlo en Netlify (ver sección de dominio arriba).
 - [ ] Añadir una imagen `og:image` para vistas previas en redes sociales.
-- [ ] Considerar renombrar el repositorio/proyecto (actualmente `kronsolutions` en GitHub, `stunning-kheer-35ef43` en Netlify) si se quiere que coincida con el nombre de marca "Cronos Solutions".
+- [ ] Considerar renombrar el proyecto en Netlify (actualmente `stunning-kheer-35ef43`) para que coincida con la marca.

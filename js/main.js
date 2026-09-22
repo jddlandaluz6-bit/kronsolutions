@@ -35,7 +35,7 @@
      Language toggle (ES / EN)
   --------------------------------------------------------------------- */
   var langToggle = document.getElementById('langToggle');
-  var STORAGE_KEY = 'cronos-lang';
+  var STORAGE_KEY = 'kron-lang';
 
   function applyLang(lang) {
     document.documentElement.lang = lang;
@@ -155,8 +155,8 @@
           en: 'Thank you. We have received your request and will contact you within 48 business hours.'
         },
         error: {
-          es: 'No se pudo enviar el formulario. Escríbenos directamente a hola@cronossolutions.es.',
-          en: 'The form could not be sent. Please email us directly at hola@cronossolutions.es.'
+          es: 'No se pudo enviar el formulario. Escríbenos directamente a hola@kronsolutions.es.',
+          en: 'The form could not be sent. Please email us directly at hola@kronsolutions.es.'
         }
       };
 

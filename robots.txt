@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://cronossolutions.es/sitemap.xml
+Sitemap: https://kronsolutions.es/sitemap.xml

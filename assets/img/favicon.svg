@@ -1,4 +1,15 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="14" fill="#1a3327"/>
-  <text x="32" y="43" text-anchor="middle" font-family="Georgia, serif" font-size="34" font-weight="600" fill="#d3b587">C</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="fB" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8FF2FF"/>
+      <stop offset="55%" stop-color="#22D3EE"/>
+      <stop offset="100%" stop-color="#0E8FA8"/>
+    </linearGradient>
+    <linearGradient id="fF" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F2440"/>
+      <stop offset="100%" stop-color="#081222"/>
+    </linearGradient>
+  </defs>
+  <rect x="18" y="18" width="64" height="64" rx="10" transform="rotate(45 50 50)" fill="url(#fF)" stroke="url(#fB)" stroke-width="5"/>
+  <text x="50" y="61" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-weight="800" font-size="30" fill="#F4FBFD">KS</text>
 </svg>
