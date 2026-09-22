@@ -16,6 +16,26 @@
   onScroll();
 
   /* ---------------------------------------------------------------------
+     Hero logo — onda de brillo al pasar el raton por encima del simbolo.
+     El pulso inicial ya viene definido en CSS (se dispara una vez al
+     cargar); aqui solo se anade una onda extra, difuminada, por cada
+     hover sobre el diamante.
+  --------------------------------------------------------------------- */
+  var heroLogoImg = document.querySelector('.hero__logo-ghost');
+  var heroLogoZone = document.querySelector('.hero__logo-zone');
+  if (heroLogoImg && heroLogoZone) {
+    heroLogoImg.addEventListener('mouseenter', function () {
+      var ring = document.createElement('span');
+      ring.className = 'hero__pulse-ring hero__pulse-ring--hover';
+      ring.setAttribute('aria-hidden', 'true');
+      heroLogoZone.appendChild(ring);
+      ring.addEventListener('animationend', function () {
+        ring.remove();
+      });
+    });
+  }
+
+  /* ---------------------------------------------------------------------
      Mobile nav
   --------------------------------------------------------------------- */
   var navToggle = document.getElementById('navToggle');

@@ -176,14 +176,33 @@ p{margin:0;}
   transform:translate(-50%,-50%) rotate(45deg) scale(.6);
   opacity:0;
   pointer-events:none;
-  animation:heroPulseWave 3.6s cubic-bezier(.2,.7,.3,1) infinite;
+  animation:heroPulseWave 3.6s cubic-bezier(.2,.7,.3,1) 1;
 }
-.hero__pulse-ring--delay{animation-delay:1.8s;}
+.hero__pulse-ring--delay{animation-delay:.45s;}
 @keyframes heroPulseWave{
   0%{opacity:0;transform:translate(-50%,-50%) rotate(45deg) scale(.6);}
   8%{opacity:.85;}
   55%{opacity:.18;}
   100%{opacity:0;transform:translate(-50%,-50%) rotate(45deg) scale(7);}
+}
+
+/* Onda de brillo al pasar el ratón por encima del simbolo — se inyecta
+   dinamicamente (ver js/main.js), 3x el ancho de partida y difuminada
+   para leerse como un resplandor, no como un anillo definido. */
+.hero__pulse-ring--hover{
+  width:58%;height:58%;
+  border:3px solid rgba(34,211,238,.85);
+  background:rgba(34,211,238,.3);
+  border-radius:24px;
+  filter:blur(18px);
+  transform:translate(-50%,-50%) rotate(45deg) scale(.6);
+  opacity:0;
+  animation:heroPulseHover 1.5s ease-out 1;
+}
+@keyframes heroPulseHover{
+  0%{opacity:0;transform:translate(-50%,-50%) rotate(45deg) scale(.6);}
+  20%{opacity:1;}
+  100%{opacity:0;transform:translate(-50%,-50%) rotate(45deg) scale(3);}
 }
 
 .hero__content{position:relative;z-index:2;max-width:760px;}
