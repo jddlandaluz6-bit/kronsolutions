@@ -16,35 +16,6 @@
   onScroll();
 
   /* ---------------------------------------------------------------------
-     Hero logo parallax — el simbolo arranca en el punto mas brillante del
-     hero y, al hacer scroll, desciende y pasa por detras del texto (queda
-     detras de .hero__content por el orden del DOM / z-index).
-  --------------------------------------------------------------------- */
-  var heroEl = document.querySelector('.hero');
-  var heroLogoZone = document.getElementById('heroLogoZone');
-  if (heroEl && heroLogoZone) {
-    var heroTicking = false;
-    var updateHeroParallax = function () {
-      var heroHeight = heroEl.offsetHeight;
-      var scrolled = Math.min(Math.max(-heroEl.getBoundingClientRect().top, 0), heroHeight);
-      var progress = heroHeight ? scrolled / heroHeight : 0;
-      var translateY = progress * 320;
-      var scale = 1 - progress * 0.12;
-      heroLogoZone.style.transform = 'translateY(' + translateY + 'px) scale(' + scale + ')';
-      heroTicking = false;
-    };
-    var requestHeroTick = function () {
-      if (!heroTicking) {
-        requestAnimationFrame(updateHeroParallax);
-        heroTicking = true;
-      }
-    };
-    window.addEventListener('scroll', requestHeroTick, { passive: true });
-    window.addEventListener('resize', requestHeroTick);
-    updateHeroParallax();
-  }
-
-  /* ---------------------------------------------------------------------
      Mobile nav
   --------------------------------------------------------------------- */
   var navToggle = document.getElementById('navToggle');
