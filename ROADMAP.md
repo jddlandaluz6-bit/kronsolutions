@@ -19,7 +19,7 @@ Estado a fecha de hoy y pasos que quedan para publicar la web de forma definitiv
 - [x] Dominio `kronsolutions.es` registrado en DonDominio el 24/09/2026 (caduca el 24/09/2027, renovación en modo **manual**: activar la renovación automática o apuntarse la fecha)
 - [x] Dominio conectado a Netlify: DNS en DonDominio con `ANAME kronsolutions.es → apex-loadbalancer.netlify.com` y `CNAME www → stunning-kheer-35ef43.netlify.app`
 - [x] Dominio principal `kronsolutions.es`; `www.kronsolutions.es` redirige automáticamente a él
-- [ ] Confirmar certificado HTTPS de Let's Encrypt activo
+- [x] Certificado HTTPS de Let's Encrypt activo (24/09/2026); http y www redirigen a https://kronsolutions.es
 - [x] Correo de contacto provisional en la web: `kronsolutions.contacto@gmail.com` (bloque de contacto, texto de consentimiento y mensaje de error del formulario)
 - [ ] Más adelante: correo corporativo con el dominio (Google Workspace, Zoho Mail u otro) y sustituir la dirección de Gmail en la web. Al hacerlo, cambiar en DonDominio los registros MX/SPF por los del proveedor elegido
 
@@ -57,7 +57,7 @@ Estado a fecha de hoy y pasos que quedan para publicar la web de forma definitiv
 ## 6. Checklist de lanzamiento — prioridad baja (cosmético)
 
 - [ ] Renombrar el proyecto en Netlify (actualmente `stunning-kheer-35ef43`) para que coincida con la marca
-- [ ] Confirmar certificado HTTPS activo sobre el dominio definitivo
+- [x] Confirmar certificado HTTPS activo sobre el dominio definitivo
 - [ ] Anunciar la web (redes sociales, firma de email, tarjetas, etc.)
 
 ## 7. Post-lanzamiento
