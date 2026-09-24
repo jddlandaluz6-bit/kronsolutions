@@ -25,6 +25,25 @@
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 
+# Documentos internos del repositorio: no se sirven en la web
+[[redirects]]
+  from = "/ROADMAP.md"
+  to = "/404.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/README.md"
+  to = "/404.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/Roadmap Kron Solutions.pdf"
+  to = "/404.html"
+  status = 404
+  force = true
+
 [[redirects]]
   from = "/*"
   to = "/index.html"
