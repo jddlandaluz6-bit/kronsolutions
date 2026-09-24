@@ -7,9 +7,11 @@ Estado a fecha de hoy y pasos que quedan para publicar la web de forma definitiv
 - [x] Landing page bilingüe (ES/EN) construida y desplegada
 - [x] Repositorio en GitHub (`jddlandaluz6-bit/kronsolutions`) conectado a Netlify con despliegue automático en cada `git push`
 - [x] Sitio publicado y en modo público: https://stunning-kheer-35ef43.netlify.app
-- [x] Formulario de contacto conectado a Netlify Forms, con notificaciones por email a `jddlandaluz6@gmail.com`
+- [x] Formulario de contacto conectado a Netlify Forms, con notificaciones por email a `kronsolutions.contacto@gmail.com`
 - [x] Identidad de marca aplicada: logo del diamante "KS" (SVG), paleta navy + cian
-- [x] Animaciones del hero (retícula de puntos, latido del logo, onda al hover)
+- [x] Animaciones del hero: retícula de puntos y símbolo KS ampliado que late solo al pasar el ratón, lanzando una onda difuminada que cruza todo el hero (máximo 2 ondas a la vez para no trabar el render)
+- [x] Corregidas las ondas finas antiguas que aparecían al cargar la página
+- [x] Sección "Cobertura 360°": carrusel 3D de iconos orbitando alrededor del título (inspirado en la sección "Captación" de prolibu.com), cabecera centrada, pausa fuera de pantalla y respeto a `prefers-reduced-motion`
 - [x] Cabeceras de seguridad y caché (`netlify.toml`), página 404, `robots.txt` y `sitemap.xml`
 
 ## 1. Dominio y correo — prioridad alta
@@ -17,14 +19,16 @@ Estado a fecha de hoy y pasos que quedan para publicar la web de forma definitiv
 - [ ] Registrar `kronsolutions.es` (o confirmar el dominio definitivo si cambia)
 - [ ] Conectar el dominio en Netlify (Domain settings → Add a domain) y esperar la propagación DNS/HTTPS
 - [ ] Si el dominio final es distinto de `kronsolutions.es`, actualizar las referencias en `index.html`, `404.html`, `robots.txt`, `sitemap.xml` y `README.md`
-- [ ] Configurar correo corporativo real para `hola@kronsolutions.es` (Google Workspace, Zoho Mail u otro) — ahora mismo esa dirección solo aparece como texto de contacto, no existe como buzón real
+- [x] Correo de contacto provisional en la web: `kronsolutions.contacto@gmail.com` (bloque de contacto, texto de consentimiento y mensaje de error del formulario)
+- [ ] Más adelante: correo corporativo con el dominio (Google Workspace, Zoho Mail u otro) y sustituir la dirección de Gmail en la web
 - [ ] Decidir y configurar si la web vive en `kronsolutions.es` o `www.kronsolutions.es`, con redirección desde el otro
 
 ## 2. Aspectos legales — prioridad alta (obligatorio en España/UE)
 
 - [ ] **Aviso legal**: razón social, CIF/NIF, domicilio social y, si aplica, datos de inscripción registral
 - [ ] **Política de privacidad**: base legal del tratamiento de datos del formulario, plazo de conservación, derechos de acceso/rectificación/supresión, y a quién dirigirse para ejercerlos
-- [ ] **Casilla de consentimiento** explícita en el formulario de contacto (hoy solo hay un texto informativo, sin checkbox que el usuario deba marcar)
+- [x] **Casilla de consentimiento** explícita y obligatoria en el formulario de contacto (se registra como `consent=yes` en Netlify Forms)
+- [ ] Enlazar la política de privacidad desde el texto de la casilla en cuanto exista la página
 - [ ] **Política de cookies** y banner de consentimiento — necesario en cuanto se instale cualquier herramienta de analítica
 - [ ] Términos y condiciones, si en el futuro se contratan servicios directamente desde la web
 
@@ -45,6 +49,7 @@ Estado a fecha de hoy y pasos que quedan para publicar la web de forma definitiv
 
 - [ ] Revisión cross-browser (Chrome, Safari, Firefox, Edge)
 - [ ] Pruebas en móvil real (iOS/Android), no solo en el emulador del navegador
+- [ ] Comprobar la fluidez de las animaciones (onda del hero, carrusel de Cobertura 360°) en equipos modestos y móviles
 - [ ] Accesibilidad básica: contraste de color, navegación por teclado, comportamiento con lector de pantalla
 - [ ] Auditoría de rendimiento con Lighthouse (Netlify tiene el plugin integrado)
 - [ ] Enviar el formulario de verdad y confirmar que la notificación llega correctamente al buzón final

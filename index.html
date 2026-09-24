@@ -67,8 +67,6 @@
       <div class="hero__grid"></div>
       <div class="hero__glow"></div>
       <div class="hero__logo-zone" aria-hidden="true">
-        <span class="hero__pulse-ring"></span>
-        <span class="hero__pulse-ring hero__pulse-ring--delay"></span>
         <img class="hero__logo-ghost" src="assets/img/logo-mark.svg" alt="">
       </div>
     </div>
@@ -191,10 +189,13 @@
   <!-- ============ ECOSISTEMA DE SERVICIOS ============ -->
   <section class="services" id="servicios">
     <div class="container">
-      <div class="section-head">
+      <div class="services__stage">
+      <div class="services__orbit" aria-hidden="true"></div>
+      <div class="section-head section-head--center">
         <p class="eyebrow"><span class="eyebrow__arrow">▸</span><span data-es="COBERTURA 360°" data-en="360° COVERAGE">COBERTURA 360°</span></p>
         <h2 data-es="Un ecosistema completo alrededor de tu negocio" data-en="A complete ecosystem around your business">Un ecosistema completo alrededor de tu negocio</h2>
         <p class="section-head__desc" data-es="Seis líneas de servicio complementarias que refuerzan el núcleo financiero y de talento." data-en="Six complementary service lines that reinforce the financial and talent core.">Seis líneas de servicio complementarias que refuerzan el núcleo financiero y de talento.</p>
+      </div>
       </div>
 
       <div class="services__grid">
@@ -275,7 +276,7 @@
         <ul class="contact__meta">
           <li>
             <span data-es="Correo" data-en="Email">Correo</span>
-            <a href="mailto:hola@kronsolutions.es">hola@kronsolutions.es</a>
+            <a href="mailto:kronsolutions.contacto@gmail.com">kronsolutions.contacto@gmail.com</a>
           </li>
           <li>
             <span data-es="Web" data-en="Web">Web</span>
@@ -362,8 +363,13 @@
           <textarea id="fMessage" name="message" rows="3"></textarea>
         </div>
 
+        <div class="form-consent">
+          <input type="checkbox" id="fConsent" name="consent" value="yes" required>
+          <label for="fConsent"><span data-es="Acepto que Kron Solutions trate mis datos personales con la única finalidad de responder a esta solicitud. Puedo ejercer mis derechos de acceso, rectificación y supresión escribiendo a kronsolutions.contacto@gmail.com." data-en="I agree that Kron Solutions may process my personal data solely to respond to this request. I can exercise my rights of access, rectification and erasure by writing to kronsolutions.contacto@gmail.com.">Acepto que Kron Solutions trate mis datos personales con la única finalidad de responder a esta solicitud. Puedo ejercer mis derechos de acceso, rectificación y supresión escribiendo a kronsolutions.contacto@gmail.com.</span></label>
+        </div>
+
         <button type="submit" class="btn btn--primary btn--block" data-es="Enviar solicitud" data-en="Send request">Enviar solicitud</button>
-        <p class="form-note" id="formNote" data-es="Al enviar aceptas ser contactado por nuestro equipo. Respondemos en menos de 48h laborables." data-en="By submitting you agree to be contacted by our team. We respond within 48 business hours.">Al enviar aceptas ser contactado por nuestro equipo. Respondemos en menos de 48h laborables.</p>
+        <p class="form-note" id="formNote" data-es="Respondemos en menos de 48h laborables." data-en="We respond within 48 business hours.">Respondemos en menos de 48h laborables.</p>
       </form>
     </div>
   </section>

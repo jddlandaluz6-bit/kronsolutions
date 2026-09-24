@@ -47,7 +47,7 @@ Netlify detecta el push a `main` y vuelve a desplegar automáticamente en 1-2 mi
 
 ## Formulario de contacto
 
-El formulario ya está conectado a **Netlify Forms** (`data-netlify="true"` en `index.html` + envío AJAX en `js/main.js`) y las notificaciones por email de nuevos leads llegan a **jddlandaluz6@gmail.com** (configurado en Forms → Submission notifications). Los envíos también quedan guardados en el panel: Project → **Forms → lead**.
+El formulario ya está conectado a **Netlify Forms** (`data-netlify="true"` en `index.html` + envío AJAX en `js/main.js`) y las notificaciones por email de nuevos leads llegan a **kronsolutions.contacto@gmail.com** (configurado en Forms → Submission notifications). Los envíos también quedan guardados en el panel: Project → **Forms → lead**.
 
 > Solo funciona una vez desplegado en Netlify (no en `localhost` ni en otros hosts). Si en el futuro se cambia de proveedor, sustituir el `fetch('/')` de `js/main.js` por el endpoint del nuevo servicio (Formspree, EmailJS, backend propio, etc.).
 
