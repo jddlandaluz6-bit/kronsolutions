@@ -152,57 +152,46 @@ p{margin:0;}
   filter:blur(14px);
 }
 .hero__logo-zone{
-  position:absolute;right:3%;top:15%;
-  width:420px;height:420px;
+  position:absolute;right:2%;top:10%;
+  width:540px;height:540px;
   display:flex;align-items:center;justify-content:center;
   opacity:.92;
 }
 .hero__logo-ghost{
   position:relative;z-index:1;
-  width:74%;height:74%;
-  animation:heroHeartbeat 1.8s ease-in-out infinite;
+  width:86%;height:86%;
+  cursor:pointer;
 }
+/* El latido solo se dispara al pasar el raton (clase anadida en js/main.js). */
+.hero__logo-ghost.is-beating{animation:heroHeartbeat 1.8s ease-in-out 1;}
 @keyframes heroHeartbeat{
   0%,38%,100%{transform:scale(1);}
   10%{transform:scale(1.09);}
   20%{transform:scale(1);}
   30%{transform:scale(1.13);}
 }
+
+/* Onda expansiva al pasar el raton — se inyecta dinamicamente (ver
+   js/main.js). Crece en tamaño (no con scale) para que el grosor y el
+   difuminado de la onda se mantengan constantes mientras cruza todo el
+   hero; --wave-end lo calcula JS segun la esquina mas lejana. */
 .hero__pulse-ring{
   position:absolute;top:50%;left:50%;
-  width:58%;height:58%;
-  border:2px solid rgba(34,211,238,.9);
-  border-radius:20px;
-  transform:translate(-50%,-50%) rotate(45deg) scale(.6);
+  width:300px;height:300px;
+  border:14px solid rgba(34,211,238,.7);
+  border-radius:48px;
+  box-shadow:0 0 70px 28px rgba(34,211,238,.4),inset 0 0 70px 28px rgba(34,211,238,.28);
+  filter:blur(38px);
+  transform:translate(-50%,-50%) rotate(45deg);
   opacity:0;
   pointer-events:none;
-  animation:heroPulseWave 3.6s cubic-bezier(.2,.7,.3,1) 1;
+  animation:heroPulseWave 4.3s cubic-bezier(.25,.6,.4,1) 1 forwards;
 }
-.hero__pulse-ring--delay{animation-delay:.45s;}
 @keyframes heroPulseWave{
-  0%{opacity:0;transform:translate(-50%,-50%) rotate(45deg) scale(.6);}
-  8%{opacity:.85;}
-  55%{opacity:.18;}
-  100%{opacity:0;transform:translate(-50%,-50%) rotate(45deg) scale(7);}
-}
-
-/* Onda de brillo al pasar el ratón por encima del simbolo — se inyecta
-   dinamicamente (ver js/main.js), 3x el ancho de partida y difuminada
-   para leerse como un resplandor, no como un anillo definido. */
-.hero__pulse-ring--hover{
-  width:58%;height:58%;
-  border:3px solid rgba(34,211,238,.85);
-  background:rgba(34,211,238,.3);
-  border-radius:24px;
-  filter:blur(18px);
-  transform:translate(-50%,-50%) rotate(45deg) scale(.6);
-  opacity:0;
-  animation:heroPulseHover 1.5s ease-out 1;
-}
-@keyframes heroPulseHover{
-  0%{opacity:0;transform:translate(-50%,-50%) rotate(45deg) scale(.6);}
-  20%{opacity:1;}
-  100%{opacity:0;transform:translate(-50%,-50%) rotate(45deg) scale(3);}
+  0%{opacity:0;width:300px;height:300px;}
+  8%{opacity:1;}
+  65%{opacity:.6;}
+  100%{opacity:0;width:var(--wave-end,3000px);height:var(--wave-end,3000px);}
 }
 
 .hero__content{position:relative;z-index:2;max-width:760px;}
@@ -312,6 +301,21 @@ section{padding:110px 0;}
 /* ==========================================================================
    Services grid
    ========================================================================== */
+/* Escenario de la cabecera: carrusel 3D de iconos orbitando alrededor del
+   titulo (posiciones calculadas en js/main.js). Los de delante (abajo) son
+   grandes y nitidos; los de detras (arriba), pequenos, difuminados y tenues. */
+.services__stage{position:relative;padding:120px 0 150px;margin-bottom:40px;}
+.services__orbit{position:absolute;inset:0;pointer-events:none;}
+.services__orbit-item{
+  position:absolute;left:0;top:0;
+  width:44px;height:44px;margin:-22px 0 0 -22px;
+  color:var(--forest-700);
+  will-change:transform,filter,opacity;
+}
+.services__orbit-item svg{width:100%;height:100%;display:block;}
+.section-head--center{position:relative;z-index:1;margin:0 auto;text-align:center;}
+.section-head--center .eyebrow{justify-content:center;}
+
 .services__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;}
 .service-card{
   background:var(--white);border:1px solid var(--cream-200);border-radius:var(--radius-md);
@@ -369,6 +373,12 @@ input:focus,select:focus,textarea:focus{
   outline:none;border-color:var(--bronze-500);box-shadow:0 0 0 3px rgba(34,211,238,.18);
 }
 textarea{resize:vertical;}
+.form-consent{display:flex;align-items:flex-start;gap:10px;}
+.form-consent input{
+  flex:none;width:18px;height:18px;margin:1px 0 0;padding:0;
+  accent-color:var(--forest-700);cursor:pointer;
+}
+.form-consent label{font-size:12.5px;font-weight:400;line-height:1.5;color:var(--ink-soft);cursor:pointer;}
 .form-note{font-size:12.5px;color:var(--ink-soft);text-align:center;}
 
 /* ==========================================================================
@@ -391,7 +401,7 @@ textarea{resize:vertical;}
   .pillars__grid,.services__grid{grid-template-columns:1fr 1fr;}
   .method__timeline{grid-template-columns:repeat(3,1fr);}
   .about__inner,.contact__inner{grid-template-columns:1fr;}
-  .hero__logo-zone{width:300px;height:300px;}
+  .hero__logo-zone{width:380px;height:380px;}
 }
 @media (max-width:760px){
   .main-nav{
@@ -411,4 +421,6 @@ textarea{resize:vertical;}
   section{padding:76px 0;}
   .hero{min-height:auto;padding:150px 0 100px;}
   .hero__logo-zone{display:none;}
+  .services__stage{padding:90px 0 110px;margin-bottom:20px;}
+  .services__orbit-item{width:32px;height:32px;margin:-16px 0 0 -16px;}
 }
