@@ -52,7 +52,7 @@ Estado a fecha de hoy y pasos que quedan para publicar la web de forma definitiv
 - [ ] Comprobar la fluidez de las animaciones (onda del hero, carrusel de Cobertura 360°) en equipos modestos y móviles
 - [ ] Accesibilidad básica: contraste de color, navegación por teclado, comportamiento con lector de pantalla
 - [ ] Auditoría de rendimiento con Lighthouse (Netlify tiene el plugin integrado)
-- [ ] Enviar el formulario de verdad y confirmar que la notificación llega correctamente al buzón final
+- [x] Enviar el formulario de verdad y confirmar que la notificación llega al buzón final (24/09/2026: el aviso llegó a `kronsolutions.contacto@gmail.com`)
 
 ## 6. Checklist de lanzamiento — prioridad baja (cosmético)
 
