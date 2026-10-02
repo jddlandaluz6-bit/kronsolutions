@@ -236,7 +236,8 @@ img {
 /* STRIP SECTORES */
 .strip {
   padding: 40px 0;
-  border-y: 1px solid var(--border-color);
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
   background-color: rgba(255, 255, 255, 0.01);
 }
 
@@ -498,7 +499,7 @@ input:focus, select:focus, textarea:focus {
 }
 
 /* ==========================================================================
-   REGLAS DE SEGURIDAD: OCULTAR "PREGÚNTAME" / "DIAGNÓSTICO" EN CUALQUIER WIDGET
+   OCULTAR "PREGÚNTAME" Y "DIAGNÓSTICO" DE CUALQUIER WIDGET DINÁMICO
    ========================================================================== */
 [data-es*="Pregúntame"],
 [data-es*="preguntame"],
