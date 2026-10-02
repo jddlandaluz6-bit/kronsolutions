@@ -395,6 +395,77 @@ textarea{resize:vertical;}
 .footer-legal{border-top:1px solid rgba(244,248,251,.1);padding-top:22px;font-size:12.5px;text-align:center;color:rgba(244,248,251,.45);}
 
 /* ==========================================================================
+   Cookie Banner
+   ========================================================================== */
+.cookie-banner {
+  position: fixed;
+  bottom: -100%;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  background: rgba(10, 22, 40, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-top: 1px solid rgba(34, 211, 238, 0.2);
+  box-shadow: 0 -10px 40px rgba(5, 11, 20, 0.5);
+  padding: 20px 0;
+  transition: bottom 0.45s var(--ease);
+}
+
+.cookie-banner.is-visible {
+  bottom: 0;
+}
+
+.cookie-banner__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media (min-width: 768px) {
+  .cookie-banner__inner {
+    flex-direction: row;
+    gap: 32px;
+  }
+}
+
+.cookie-banner__text p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.55;
+  color: rgba(244, 248, 251, 0.88);
+}
+
+.cookie-banner__actions {
+  display: flex;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.cookie-banner__actions .btn--ghost {
+  color: var(--cream-050);
+  border-color: rgba(244, 248, 251, 0.3);
+}
+
+.cookie-banner__actions .btn--ghost:hover {
+  background: rgba(244, 248, 251, 0.15);
+  border-color: var(--cream-050);
+  color: var(--cream-050);
+}
+
+.cookie-banner__actions .btn--primary {
+  background: var(--bronze-500);
+  color: var(--forest-900);
+}
+
+.cookie-banner__actions .btn--primary:hover {
+  background: var(--bronze-300);
+  transform: translateY(-2px);
+}
+
+/* ==========================================================================
    Responsive
    ========================================================================== */
 @media (max-width:960px){
@@ -423,4 +494,11 @@ textarea{resize:vertical;}
   .hero__logo-zone{display:none;}
   .services__stage{padding:90px 0 110px;margin-bottom:20px;}
   .services__orbit-item{width:32px;height:32px;margin:-16px 0 0 -16px;}
+  
+  .cookie-banner__actions {
+    width: 100%;
+  }
+  .cookie-banner__actions .btn {
+    flex: 1;
+  }
 }
